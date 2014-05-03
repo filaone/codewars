@@ -77,5 +77,5 @@
 ##SantaClausable Interface
 ###014_si_7k.rb
 
-* Check If A Ruby Method Exists    [link](http://http://www.dzone.com/snippets/check-if-ruby-method-exists)
+* Check If A Ruby Method Exists    [link](http://www.dzone.com/snippets/check-if-ruby-method-exists)
 
