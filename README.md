@@ -25,4 +25,10 @@
 |Milk and Cookies for Santa|012_macfs_7k.rb|
 |Float Precision|013_fp_7k.rb|
 |SantaClausable Interface|014_si_7k.rb|
+|Extract the IDs from the data set|015_etiftds_6k.rb|
+
+
+
+
+Do not Copy! Just Try yourself 
 

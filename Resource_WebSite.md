@@ -79,3 +79,9 @@
 
 * Check If A Ruby Method Exists    [link](http://www.dzone.com/snippets/check-if-ruby-method-exists)
 
+##Extract the IDs from the data set
+###015_etiftds_6k.rb
+* use concat
+* just get the string of "id=>num"
+
+
