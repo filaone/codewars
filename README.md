@@ -1,5 +1,8 @@
 #Code For the Codewars
-**You Are a Warriors Now**
+====
+
+
+**You Are a Warrior Now**
 
 	do { |you|
 	Solve_probem_Yourself(codewars)
@@ -8,6 +11,8 @@
 	Improve(yourself)
 	}
 	
+##Section 1 : Ruby Codewars
+---
 
 |Problem|Ruby_File|
 |---------|-------|
@@ -28,7 +33,21 @@
 |Extract the IDs from the data set|015_etiftds_6k.rb|
 
 
+##Section 2 : Ruby 268 Skills
+---
+Remain to complete.
 
+##Section 3 : Python Codewars
+---
+Remain to complete.
+
+
+##Section 4 : Python 268 Skills
+---
+
+|Problem|Python_File|
+|-------|-----------|
+|||
 
 Do not Copy! Just Try yourself 
 
