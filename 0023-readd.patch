@@ -1,0 +1,767 @@
+From 4565c6a31bb85cc9f2122779566f297fccd8c22a Mon Sep 17 00:00:00 2001
+From: cnetwork <shuguang.wang1990@gmail.com>
+Date: Thu, 25 Aug 2016 23:06:28 +0800
+Subject: [PATCH 23/25] readd
+
+---
+ README.md                                          | 21 +++++-
+ Resource_WebSite.md                                | 87 ----------------------
+ TypeAgain.rb                                       |  0
+ python_wars/268_skill/019_literal.py               | 18 -----
+ python_wars/268_skill/020_text_encoding.py         |  7 --
+ python_wars/268_skill/021_trans_encoding.py        | 22 ------
+ python_wars/268_skill/021_trans_encoding2.py       | 20 -----
+ python_wars/268_skill/022_detect_charset.py        | 29 --------
+ python_wars/268_skill/023_copy_string.py           | 18 -----
+ python_wars/268_skill/024_repeat_string.py         |  9 ---
+ python_wars/268_skill/025_get_string_length.py     | 19 -----
+ python_wars/268_skill/026_search_string.py         | 52 -------------
+ python_wars/268_skill/027_beginning_patterns.py    | 24 ------
+ python_wars/268_skill/028_single_match.py          | 13 ----
+ .../268_skill/029_specific_encode_regex_match.py   | 19 -----
+ .../268_skill/030_point_match_newline_break.py     |  8 --
+ python_wars/268_skill/031_get_the_regex_remnant.py |  9 ---
+ .../032_count_single_wordString_frenquency.py      | 12 ---
+ python_wars/268_skill/033_count_frenquency.py      | 35 ---------
+ python_wars/268_skill/034_compare_string.py        | 16 ----
+ python_wars/268_skill/035_blank_match.py           | 11 ---
+ python_wars/268_skill/036_blank_line_match.py      | 22 ------
+ ruby_wars/Ruby_Codewars_Rescources.md              | 87 ++++++++++++++++++++++
+ 23 files changed, 107 insertions(+), 451 deletions(-)
+ delete mode 100644 Resource_WebSite.md
+ delete mode 100644 TypeAgain.rb
+ delete mode 100644 python_wars/268_skill/019_literal.py
+ delete mode 100644 python_wars/268_skill/020_text_encoding.py
+ delete mode 100644 python_wars/268_skill/021_trans_encoding.py
+ delete mode 100644 python_wars/268_skill/021_trans_encoding2.py
+ delete mode 100644 python_wars/268_skill/022_detect_charset.py
+ delete mode 100644 python_wars/268_skill/023_copy_string.py
+ delete mode 100644 python_wars/268_skill/024_repeat_string.py
+ delete mode 100644 python_wars/268_skill/025_get_string_length.py
+ delete mode 100644 python_wars/268_skill/026_search_string.py
+ delete mode 100644 python_wars/268_skill/027_beginning_patterns.py
+ delete mode 100644 python_wars/268_skill/028_single_match.py
+ delete mode 100644 python_wars/268_skill/029_specific_encode_regex_match.py
+ delete mode 100644 python_wars/268_skill/030_point_match_newline_break.py
+ delete mode 100644 python_wars/268_skill/031_get_the_regex_remnant.py
+ delete mode 100644 python_wars/268_skill/032_count_single_wordString_frenquency.py
+ delete mode 100644 python_wars/268_skill/033_count_frenquency.py
+ delete mode 100644 python_wars/268_skill/034_compare_string.py
+ delete mode 100644 python_wars/268_skill/035_blank_match.py
+ delete mode 100644 python_wars/268_skill/036_blank_line_match.py
+ create mode 100644 ruby_wars/Ruby_Codewars_Rescources.md
+
+diff --git a/README.md b/README.md
+index 373cda2..adf259b 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,8 @@
+ #Code For the Codewars
+-**You Are a Warriors Now**
++====
++
++
++**You Are a Warrior Now**
+ 
+ 	do { |you|
+ 	Solve_probem_Yourself(codewars)
+@@ -8,6 +11,8 @@
+ 	Improve(yourself)
+ 	}
+ 	
++##Section 1 : Ruby Codewars
++---
+ 
+ |Problem|Ruby_File|
+ |---------|-------|
+@@ -28,7 +33,21 @@
+ |Extract the IDs from the data set|015_etiftds_6k.rb|
+ 
+ 
++##Section 2 : Ruby 268 Skills
++---
++Remain to complete.
++
++##Section 3 : Python Codewars
++---
++Remain to complete.
++
++
++##Section 4 : Python 268 Skills
++---
+ 
++|Problem|Python_File|
++|-------|-----------|
++|||
+ 
+ Do not Copy! Just Try yourself 
+ 
+diff --git a/Resource_WebSite.md b/Resource_WebSite.md
+deleted file mode 100644
+index ea752a6..0000000
+--- a/Resource_WebSite.md
++++ /dev/null
+@@ -1,87 +0,0 @@
+-##Welcome to the City
+-###001_wttc_8k.rb
+-*  Let's Begin the CodeWars!!!
+-
+-
+-##Search for letters
+-###002_sfl_7k.rb
+-* can use the each_byte
+-
+-
+-
+-
+-##Sort for gift Code
+-###003_sfgc_7k.rb
+-* too simple~
+-
+-##Substituting Variables Into String
+-###004_pd_7k.rb
+-* use sprintf
+-
+-##Remove Odd Hashes
+-###005_roh_7k.rb
+-* array.delete|reject|inject|map
+-
+-
+-##Given an array of numbers...
+-###006_waps_7k.rb
+-* Math.sqrt[link](http://stackoverflow.com/questions/2844526/why-is-sqrt-not-a-method-on-numeric)
+-
+-
+-##IPv4 to int32
+-###007_iti_6k.rb
+-* how to convert and out put different ary? [link](http://blog.csdn.net/garn_hsia/article/details/7869895)
+-
+-##Number of trailing zero of N!
+-###008_notzon_5k.rb
+-* use reduce to get the factorial cost too much
+-* know the trailing zero algrithm[link](http://en.wikipedia.org/wiki/Trailing_zero)and[link2](http://en.wikipedia.org/wiki/De_Polignac%27s_formula)
+-
+-##Sort Sentence pseudo-alphabeticall
+-###009_ssp_6k.rb
+-
+-* delete the punctuation <the ruby way> 68Page
+-* use the scan
+-* ruby partition[link](http://jeffancel.com/ruby-enumerablepartition/2011/04)
+-* tell if character is upper of lowcase[link](http://stackoverflow.com/questions/12713251/ruby-how-to-tell-if-character-is-upper-lowercase)
+-* conncet the array to string[link](http://stackoverflow.com/questions/3500814/ruby-array-to-string-conversion)
+-
+-
+-##Who has the most money
+-###010_whtmm_6k.rb
+-* sort the class(use its variable and your rules)[link](https://ariejan.net/2007/01/28/ruby-sort-an-array-of-objects-by-an-attribute/)
+-
+-
+-
+-##Building Strings From a Hash
+-###011_bsfah_7k.rb
+-* ' 'can not contain expression(some functions can use string and do as expression)
+-* truning hash into a string [link](http://stackoverflow.com/questions/1823758/turning-a-hash-into-a-string-of-name-value-pairs)
+-
+-
+-
+-##Milk and Cookies for Santa
+-###012_macfs_7k.rb
+-* The 'data' and 'datatime' class
+-
+-
+-
+-##Float Precision
+-###013_fp_7k.rb
+-
+-* round off a float to x decimal places [link](https://www.ruby-forum.com/topic/84482)
+-* {"%.2f" % value} can be string! 
+-
+-
+-
+-##SantaClausable Interface
+-###014_si_7k.rb
+-
+-* Check If A Ruby Method Exists    [link](http://www.dzone.com/snippets/check-if-ruby-method-exists)
+-
+-##Extract the IDs from the data set
+-###015_etiftds_6k.rb
+-* use concat
+-* just get the string of "id=>num"
+-
+-
+diff --git a/TypeAgain.rb b/TypeAgain.rb
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/python_wars/268_skill/019_literal.py b/python_wars/268_skill/019_literal.py
+deleted file mode 100644
+index 7a6f98c..0000000
+--- a/python_wars/268_skill/019_literal.py
++++ /dev/null
+@@ -1,18 +0,0 @@
+-#!/usr/bin/python
+-
+-print 'Let\'s Say : '
+-print "'Hello world'"
+-print '"Hello world!!"'
+-print 'String1 '"String2 ""'String3'"
+-
+-print u""" Multi lines
+-can be written 
+-using three
+-"""
+-print 'C:\nowhere'
+-print 'C:\\nowhere'
+-print r'C:\nowhere'
+-
+-print r'"<r>" means origin string and it\' useful for zhegnze'
+-print r'let' '\'s ' r'go(Use combine)'
+-
+diff --git a/python_wars/268_skill/020_text_encoding.py b/python_wars/268_skill/020_text_encoding.py
+deleted file mode 100644
+index 1d3dee2..0000000
+--- a/python_wars/268_skill/020_text_encoding.py
++++ /dev/null
+@@ -1,7 +0,0 @@
+-#!/usr/bin/python
+-# -*- coding: utf-8 -*-
+-
+-print u"The default for Python 2 is ASCII(for Python 3 it's utf-8)."
+-print u"This just affects how the interpreter reads the characters in the file."
+-print u"When you declare a string with a u in front, like u'This is a string', it tells the Python compiler that the string is Unicode, not bytes. the most different is that youcan now embed unicode characters in the strng(that is, u'\u2665' is now legal, you can use from __futrue__ import unicode_literals to make it the default."
+-print b'\u2665' u'\u2665'
+diff --git a/python_wars/268_skill/021_trans_encoding.py b/python_wars/268_skill/021_trans_encoding.py
+deleted file mode 100644
+index 8464bd8..0000000
+--- a/python_wars/268_skill/021_trans_encoding.py
++++ /dev/null
+@@ -1,22 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding: utf-8 -*-
+-
+-s = "Flügel"
+-print s
+-print "if no coding: utf-8 (use utf8 store the code)there is an error because ASCII has no ü"
+-print "u'' means this is a unicode string"
+-unicode_s = s.decode('utf-8')
+-print u"other_encode.decode('other_type') means turn the other string which use other type into the unicode"
+-print unicode_s
+-
+-latin_s = unicode_s.encode('latin_1')
+-print u"unicode_string.encode('other') means turn unicode string into other encoding such as utf-8 or latin_1"
+-print latin_s
+-
+-hanzi = '字瀛'
+-print hanzi
+-new_uni2 = u'字å­å字瀛'
+-print new_uni2
+-new_utf2 = new_uni2.encode('utf-8')
+-print new_utf2
+-
+diff --git a/python_wars/268_skill/021_trans_encoding2.py b/python_wars/268_skill/021_trans_encoding2.py
+deleted file mode 100644
+index ccd8778..0000000
+--- a/python_wars/268_skill/021_trans_encoding2.py
++++ /dev/null
+@@ -1,20 +0,0 @@
+-#!/usr/bin/python
+-
+-new_s = '\xe5\xad\x97'
+-print type(new_s)
+-print new_s
+-new_uni = new_s.decode('latin_1')
+-print new_uni
+-
+-new_utf = new_uni.encode('utf-8')
+-print new_utf
+-new_uni2 = new_s.decode('utf-8')
+-print new_uni2
+-
+-new_uni3 = new_s.decode('gb2312','ignore')
+-print new_uni3
+-
+-print "decode poduce unicode"
+-print "encode accept unicode"
+-
+-
+diff --git a/python_wars/268_skill/022_detect_charset.py b/python_wars/268_skill/022_detect_charset.py
+deleted file mode 100644
+index 664e9f3..0000000
+--- a/python_wars/268_skill/022_detect_charset.py
++++ /dev/null
+@@ -1,29 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding:utf-8 -*-
+-import chardet
+-
+-
+-def whatisthis(s):
+-    if isinstance(s,str):
+-        print "Ordinary string"
+-    elif isinstance(s,unicode):
+-        print "Unicode string"
+-    else:
+-        print "not a string"
+-
+-s = 'hello world'
+-whatisthis(s)
+-uni = s.decode('utf-8')
+-whatisthis(uni)
+-print type(uni).__name__
+-lat = uni.encode('latin_1')
+-whatisthis(lat)
+-print type(lat).__name__
+-
+-print "isinstance can determin is or not unicode"
+-print "also type().__name__"
+-
+-if type(s).__name__!='unicode':
+-    print chardet.detect(s)
+-else:
+-    print "unicode!"
+diff --git a/python_wars/268_skill/023_copy_string.py b/python_wars/268_skill/023_copy_string.py
+deleted file mode 100644
+index 53086f0..0000000
+--- a/python_wars/268_skill/023_copy_string.py
++++ /dev/null
+@@ -1,18 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding:utf-8 -*-
+-import copy
+-
+-print "http://stackoverflow.com/questions/24804453/how-can-i-copy-a-python-string"
+-
+-
+-
+-s = "This is a string"
+-
+-a = str(s)
+-b = s[:]
+-c = s + ''
+-d = copy.copy(s)
+-e = s
+-f = (s + '.')[:-1]
+-
+-print map(id, [s, a, b, c, d, e, f])
+diff --git a/python_wars/268_skill/024_repeat_string.py b/python_wars/268_skill/024_repeat_string.py
+deleted file mode 100644
+index dd13ade..0000000
+--- a/python_wars/268_skill/024_repeat_string.py
++++ /dev/null
+@@ -1,9 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding: utf-8 -*-
+-
+-s = "hello world"
+-
+-print s[:6]*2
+-print 2*s
+-print ' '.join((s[:]) * 2)
+-print ' '.join([s[:]] * 2)
+diff --git a/python_wars/268_skill/025_get_string_length.py b/python_wars/268_skill/025_get_string_length.py
+deleted file mode 100644
+index 084ccf3..0000000
+--- a/python_wars/268_skill/025_get_string_length.py
++++ /dev/null
+@@ -1,19 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding: utf-8 -*-
+-
+-string = u'Hello world #-*- coding: utf-8 -*- '
+-print "String Length : "+str(len(string))
+-list_s = list(string)
+-print len(list_s)
+-tuple_s = tuple(string)
+-tuple_l = tuple(list_s)
+-print tuple_s
+-print len(tuple_s)
+-print tuple_l
+-print len(tuple_l)
+-set_s = set(string)
+-set_l = set(list_s)
+-set_t = set(tuple_s)
+-print set_s
+-print len(set_s)
+-
+diff --git a/python_wars/268_skill/026_search_string.py b/python_wars/268_skill/026_search_string.py
+deleted file mode 100644
+index e64c9ea..0000000
+--- a/python_wars/268_skill/026_search_string.py
++++ /dev/null
+@@ -1,52 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding:utf-8 -*-
+-
+-import re
+-string_1 = "A1B2C3C3D4G5J88I9870897\n C1N200J1\n a1B2\n A10B\n"
+-pattern_1 = re.compile(r'([A-Z]\d+)+')
+-
+-print "determine have pattern or not"
+-if pattern_1.match(string_1):
+-    print "matched"
+-else:
+-    print "not match"
+-
+-string_2 = u'A1B2C3C3D4G5J88I9870897'
+-pattern_2 = re.compile('([A-Z]\d)+')
+-
+-
+-print "the first location of the pattern"
+-for m in re.finditer(pattern_2,string_1):
+-    print m.group()
+-for m in pattern_2.finditer(string_1):
+-    print m.start(),m.end(), m.group()
+-
+-callable_iterator_object  = pattern_2.finditer(string_1)
+-print callable_iterator_object
+-print list(callable_iterator_object)[2].group()
+-print callable_iterator_object
+-#print list(callable_iterator_object)[2].group()
+-# why error????
+-re_matchobject = pattern_2.search(string_2)
+-print "only the first span [0,14)"
+-print re_matchobject
+-print re_matchobject.group()
+-print re_matchobject.span()
+-
+-
+-print "the last location of the pattern"
+-print "can use finditer to create a new list and use [-1]"
+-print "just use the finditer"
+-
+-print "get more information"
+-print "use m.start(),m.end(),m.group()"
+-
+-print "process the target lines"
+-print string_1
+-print pattern_1.findall(string_1)
+-print re.findall(pattern_1, string_1)
+-f = open('/home/wsg/Code/python_project/268_skill/020_text_encoding.py')
+-for line in f:
+-    print line
+-    print  pattern_2.findall(string_1)
+-f.close()
+diff --git a/python_wars/268_skill/027_beginning_patterns.py b/python_wars/268_skill/027_beginning_patterns.py
+deleted file mode 100644
+index b9db012..0000000
+--- a/python_wars/268_skill/027_beginning_patterns.py
++++ /dev/null
+@@ -1,24 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding: utf-8 -*-
+-
+-import re
+-string_1 = """helloo
+-  hello    
+-helloooo
+- world world worlds world"""
+-pattern_1 = re.compile(r'\Ahello+')
+-pattern_2 = re.compile('^hello+')
+-pattern_3 = re.compile(r'hello')
+-pattern_4 = re.compile(r'hello$')
+-pattern_5 = re.compile(r'hello\Z')
+-print pattern_1.findall(string_1)
+-print pattern_2.findall(string_1)
+-print pattern_3.findall(string_1)
+-print pattern_4.findall(string_1)
+-print pattern_5.findall(string_1)
+-print "it seems \\A and ^ is the same"
+-print "So as the \\Z and $"
+-print pattern_3.search(string_1).group()
+-print pattern_3.finditer(string_1)
+-for m in pattern_3.finditer(string_1):
+-    print m.group(),m.start(),m.end()
+diff --git a/python_wars/268_skill/028_single_match.py b/python_wars/268_skill/028_single_match.py
+deleted file mode 100644
+index 1246758..0000000
+--- a/python_wars/268_skill/028_single_match.py
++++ /dev/null
+@@ -1,13 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding: utf-8 -*-
+-
+-import re
+-string_1 = "foo foo. {foo}"
+-string_2 = "foo3 hfoo foobar!"
+-string_3 = u'This is\ta 2pen.'
+-pattern_1 = re.compile(r'\bfoo\b')
+-print pattern_1.findall(string_1)
+-print pattern_1.findall(string_2)
+-print re.findall(r'\w+', string_2)
+-print re.findall(r'\w+', string_3)
+-print string_3.split()
+diff --git a/python_wars/268_skill/029_specific_encode_regex_match.py b/python_wars/268_skill/029_specific_encode_regex_match.py
+deleted file mode 100644
+index ff6dd86..0000000
+--- a/python_wars/268_skill/029_specific_encode_regex_match.py
++++ /dev/null
+@@ -1,19 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding:utf-8 -*-
+-import re
+-
+-print "http://stackoverflow.com/questions/10165102/how-do-i-get-a-regular-expression-to-recognize-non-ascii-characters-as-letters"
+-print "Always work in unicode, and only convert to an encoded representation when necessary."
+-
+-string_1 = u"ö äåii差距就在这希 lllll 望您能集体 反思最后觉定 ... き ki , ひ hi , み mi, け ke, へ he, め me, こ ko, そ so, と to, の no, も mo, よ yo"
+-string_2 = "ö äåii差距就在这希 lllll 望您能集体 反思最后觉定 ... き ki , ひ hi , み mi, け ke, へ he, め me, こ ko, そ so, と to, の no, も mo, よ yo"
+-
+-print string_1
+-
+-print re.findall(r'\w+', string_1)
+-re_1 = re.findall(r'\w+', string_2.decode('utf-8'), flags=re.U)
+-print "Use flags re.UNICODE"
+-re_2 = re.sub(r'[\w]+', '', string_2.decode('utf-8'), flags=re.U)
+-for m in re_1:
+-    print m.encode('utf-8')
+-print re_2
+diff --git a/python_wars/268_skill/030_point_match_newline_break.py b/python_wars/268_skill/030_point_match_newline_break.py
+deleted file mode 100644
+index 54d7eec..0000000
+--- a/python_wars/268_skill/030_point_match_newline_break.py
++++ /dev/null
+@@ -1,8 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding:utf-8 -*-
+-
+-import re
+-
+-print "http://stackoverflow.com/questions/8150745/regular-expression-how-to-match-a-string-containing-n-newline"
+-print "USE re.DOTALL"
+-print re.match(r".", "\n",re.DOTALL)
+diff --git a/python_wars/268_skill/031_get_the_regex_remnant.py b/python_wars/268_skill/031_get_the_regex_remnant.py
+deleted file mode 100644
+index 0808ee2..0000000
+--- a/python_wars/268_skill/031_get_the_regex_remnant.py
++++ /dev/null
+@@ -1,9 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding: utf-8 -*-
+-
+-import re
+-print "get the remnant of the match use re.sub()" 
+-s = "87 hel foo bar 87 foo"
+-r = re.compile(r"87\s")
+-print r.sub('',s)
+-print r.findall(s)
+diff --git a/python_wars/268_skill/032_count_single_wordString_frenquency.py b/python_wars/268_skill/032_count_single_wordString_frenquency.py
+deleted file mode 100644
+index 00f510d..0000000
+--- a/python_wars/268_skill/032_count_single_wordString_frenquency.py
++++ /dev/null
+@@ -1,12 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding:utf-8 -*-
+-
+-import re
+-
+-        
+-string_1 = "abcdsdfsdfs\ndskjghwer\basdjtwoieutuwet\s"
+-pattern_1 = re.compile(r"a")
+-print pattern_1.findall(string_1)
+-print len(pattern_1.findall(string_1))
+-
+-print string_1.count('a')
+diff --git a/python_wars/268_skill/033_count_frenquency.py b/python_wars/268_skill/033_count_frenquency.py
+deleted file mode 100644
+index 0dd09d2..0000000
+--- a/python_wars/268_skill/033_count_frenquency.py
++++ /dev/null
+@@ -1,35 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding:utf-8 -*-
+-
+-from collections import defaultdict
+-from collections import Counter
+-from itertools import groupby
+-import json
+-
+-string_1 = u"sdlkghweoivnlskdguoqeithosdkhgja;sldnasodfiuasldhg;qieuwouhydhgfjsdkljgslkdfjgslkfdjgslkfdjdgfskdfjTö äåii差距就在这希 lllll 望您能集体 反思最后觉定 ... き ki , ひ hi , み mi, け ke, へ he, め me, こ ko, そ so, と to, の no, も mo, よ yo"
+-string_2 = u"ö äåii差距就在这希 lllll 望您能集体 反思最后觉定 ... き ki , ひ hi , み mi, け ke, へ he, め me, こ ko, そ so, と to, の no, も mo, よ yoy"
+-
+-result = defaultdict(int)
+-words_1 = string_1.split()
+-print words_1
+-for word in words_1:
+-    result[word] += 1
+-    print word.encode('utf-8')
+-
+-print result
+-
+-print result.keys()
+-for key in result.keys():
+-    print key.encode('utf-8')
+-
+-result_2 = dict((key, len(list(group))) for key, group in groupby(sorted(words_1)))
+-print result_2
+-
+-freqs_1 = Counter(words_1)
+-print freqs_1
+-
+-
+-freqs_2 = {}
+-for word in words_1:
+-    freqs_2[word] = freqs_2.get(word, 0) + 1
+-print freqs_2
+diff --git a/python_wars/268_skill/034_compare_string.py b/python_wars/268_skill/034_compare_string.py
+deleted file mode 100644
+index 361ad26..0000000
+--- a/python_wars/268_skill/034_compare_string.py
++++ /dev/null
+@@ -1,16 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding:utf-8 -*-
+-from collections import Counter
+-
+-string_1 = u'abc def ghi'
+-string_2 = u'abc def ghi'
+-string_3 = u'ghi def abc'
+-
+-print string_1 == string_2
+-print string_2 == string_3
+-print Counter(string_1) == Counter(string_2)
+-
+-set_2 = set(string_1.split(' '))
+-set_3 = set(string_3.split(' ')) 
+-
+-print set_2 == set_3
+diff --git a/python_wars/268_skill/035_blank_match.py b/python_wars/268_skill/035_blank_match.py
+deleted file mode 100644
+index c37548a..0000000
+--- a/python_wars/268_skill/035_blank_match.py
++++ /dev/null
+@@ -1,11 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding:utf-8 -*-
+-
+-import re
+-
+-pattern_1 = re.compile(r' ')
+-string_1 = u"   \t\n\r\f"
+-print string_1
+-print string_1.count(r"\s")
+-print len(pattern_1.findall(string_1))
+-
+diff --git a/python_wars/268_skill/036_blank_line_match.py b/python_wars/268_skill/036_blank_line_match.py
+deleted file mode 100644
+index dd2f62a..0000000
+--- a/python_wars/268_skill/036_blank_line_match.py
++++ /dev/null
+@@ -1,22 +0,0 @@
+-#!/usr/bin/python
+-#-*- coding:utf-8 -*-
+-
+-string_1 = """ 
+-a\n
+-
+-b
+-  \n      
+-bbb\n
+-"""
+-
+-file_1 = open('/home/wsg/Code/python_project/268_skill/032_count_single_wordString_frenquency.py')
+-
+-for line in file_1:
+-    if not line.strip():
+-        print "a blank line"
+-    else:
+-        print line
+-
+-print "---------------"
+-for line in string_1:
+-    print line
+diff --git a/ruby_wars/Ruby_Codewars_Rescources.md b/ruby_wars/Ruby_Codewars_Rescources.md
+new file mode 100644
+index 0000000..ea752a6
+--- /dev/null
++++ b/ruby_wars/Ruby_Codewars_Rescources.md
+@@ -0,0 +1,87 @@
++##Welcome to the City
++###001_wttc_8k.rb
++*  Let's Begin the CodeWars!!!
++
++
++##Search for letters
++###002_sfl_7k.rb
++* can use the each_byte
++
++
++
++
++##Sort for gift Code
++###003_sfgc_7k.rb
++* too simple~
++
++##Substituting Variables Into String
++###004_pd_7k.rb
++* use sprintf
++
++##Remove Odd Hashes
++###005_roh_7k.rb
++* array.delete|reject|inject|map
++
++
++##Given an array of numbers...
++###006_waps_7k.rb
++* Math.sqrt[link](http://stackoverflow.com/questions/2844526/why-is-sqrt-not-a-method-on-numeric)
++
++
++##IPv4 to int32
++###007_iti_6k.rb
++* how to convert and out put different ary? [link](http://blog.csdn.net/garn_hsia/article/details/7869895)
++
++##Number of trailing zero of N!
++###008_notzon_5k.rb
++* use reduce to get the factorial cost too much
++* know the trailing zero algrithm[link](http://en.wikipedia.org/wiki/Trailing_zero)and[link2](http://en.wikipedia.org/wiki/De_Polignac%27s_formula)
++
++##Sort Sentence pseudo-alphabeticall
++###009_ssp_6k.rb
++
++* delete the punctuation <the ruby way> 68Page
++* use the scan
++* ruby partition[link](http://jeffancel.com/ruby-enumerablepartition/2011/04)
++* tell if character is upper of lowcase[link](http://stackoverflow.com/questions/12713251/ruby-how-to-tell-if-character-is-upper-lowercase)
++* conncet the array to string[link](http://stackoverflow.com/questions/3500814/ruby-array-to-string-conversion)
++
++
++##Who has the most money
++###010_whtmm_6k.rb
++* sort the class(use its variable and your rules)[link](https://ariejan.net/2007/01/28/ruby-sort-an-array-of-objects-by-an-attribute/)
++
++
++
++##Building Strings From a Hash
++###011_bsfah_7k.rb
++* ' 'can not contain expression(some functions can use string and do as expression)
++* truning hash into a string [link](http://stackoverflow.com/questions/1823758/turning-a-hash-into-a-string-of-name-value-pairs)
++
++
++
++##Milk and Cookies for Santa
++###012_macfs_7k.rb
++* The 'data' and 'datatime' class
++
++
++
++##Float Precision
++###013_fp_7k.rb
++
++* round off a float to x decimal places [link](https://www.ruby-forum.com/topic/84482)
++* {"%.2f" % value} can be string! 
++
++
++
++##SantaClausable Interface
++###014_si_7k.rb
++
++* Check If A Ruby Method Exists    [link](http://www.dzone.com/snippets/check-if-ruby-method-exists)
++
++##Extract the IDs from the data set
++###015_etiftds_6k.rb
++* use concat
++* just get the string of "id=>num"
++
++
+-- 
+2.5.5
+

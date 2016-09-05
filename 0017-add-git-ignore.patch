@@ -1,0 +1,20 @@
+From 977c1607a3b8a441e9c87a32c323b559e9cec329 Mon Sep 17 00:00:00 2001
+From: wsg <buaa_wsg@163.com>
+Date: Thu, 25 Aug 2016 16:53:06 +0800
+Subject: [PATCH 17/25] add git ignore
+
+---
+ .gitignore | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..e347262
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++.DS_Store*
+-- 
+2.5.5
+

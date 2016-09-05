@@ -1,0 +1,21 @@
+From 321cf18421e2dfcfeecc13e996ef9bf522261888 Mon Sep 17 00:00:00 2001
+From: Cnetwork <shuguang.wang1990@gmail.com>
+Date: Mon, 21 Apr 2014 17:56:03 +0800
+Subject: [PATCH 04/25] pull nothing use git fetch origin master git reset
+ --hard FETCH_HEAD
+
+---
+ test | 1 -
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 test
+
+diff --git a/test b/test
+deleted file mode 100644
+index 9daeafb..0000000
+--- a/test
++++ /dev/null
+@@ -1 +0,0 @@
+-test
+-- 
+2.5.5
+

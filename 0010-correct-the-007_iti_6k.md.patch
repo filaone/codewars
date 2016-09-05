@@ -1,0 +1,39 @@
+From 51f80c1296632a768774a16c10fc98440945c16e Mon Sep 17 00:00:00 2001
+From: cnetwork <shuguang.wang1990@gmail.com>
+Date: Fri, 2 May 2014 23:09:29 +0800
+Subject: [PATCH 10/25] correct the 007_iti_6k.md
+
+---
+ .DS_Store     | Bin 6148 -> 6148 bytes
+ 007_iti_6k.md |   2 +-
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/.DS_Store b/.DS_Store
+index 2744e645fa1205914fa9942ef748e7fbbe15fbb2..5008ddfcf53c02e82d7eee2e57c38e5672ef89f6 100644
+GIT binary patch
+delta 69
+zcmZoMXfc=|#>AjHu~2NHo+1YW5HK<@2yFhyD8{ylX%^#Vb`E|Hpgd6EJM(0I5k*d*
+SG(!SN-DDFU<;^i7E0_TqCl31n
+
+delta 306
+zcmZoMXfc=|#>B`mF;Q%yo}wrV0|Nsi1A_nqLpehU5GFIkGgwSaTwV{7;AJoXLPMYs
+zk|cv3LlHxgXHI@{QcivnP!&)w!x<pf0AkMn|A8a}0}oiI5m09_LmER4kT%DrkMRaj
+zt;T;a0PBO;Xv`3w1k_l<kPdbaR;>(fKn*jHv~q*3Gyz&wz>tE=La;+;0Clqc|GzO&
+onr*Uy2+L+}4sH%$h-^&!&ODi4M3I#VD6cTtP(*mMhsYjg0Q7c3ssI20
+
+diff --git a/007_iti_6k.md b/007_iti_6k.md
+index bbfee94..1679f74 100644
+--- a/007_iti_6k.md
++++ b/007_iti_6k.md
+@@ -19,7 +19,7 @@
+ 
+ ###Ruby 字符串格式化
+ |expression  |    result|
+-|-|-|
++|------------|----------|
+ |"%05d" % 123 |00123|
+ |"%02X" % 10 | 0A|
+ |"%03x" % 10 | 00a|
+-- 
+2.5.5
+

@@ -1,0 +1,20 @@
+From 42df3fc46b242096edf6a48ed7c8b4bcae324a76 Mon Sep 17 00:00:00 2001
+From: wsg <buaa_wsg@163.com>
+Date: Thu, 25 Aug 2016 16:56:29 +0800
+Subject: [PATCH 18/25] del python wars
+
+---
+ python_wars/268_skill | 1 -
+ 1 file changed, 1 deletion(-)
+ delete mode 160000 python_wars/268_skill
+
+diff --git a/python_wars/268_skill b/python_wars/268_skill
+deleted file mode 160000
+index 1c8d7e7..0000000
+--- a/python_wars/268_skill
++++ /dev/null
+@@ -1 +0,0 @@
+-Subproject commit 1c8d7e7200385f92a8a047b8cbc732a225f43e8c
+-- 
+2.5.5
+

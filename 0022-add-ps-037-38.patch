@@ -1,0 +1,595 @@
+From 726a55bcb65a410f67e700df59778709ade5b587 Mon Sep 17 00:00:00 2001
+From: cnetwork <shuguang.wang1990@gmail.com>
+Date: Thu, 25 Aug 2016 23:05:50 +0800
+Subject: [PATCH 22/25] add ps 037 & 38
+
+---
+ python_skills/019_literal.py                       | 18 ++++++++
+ python_skills/020_text_encoding.py                 |  7 +++
+ python_skills/021_trans_encoding.py                | 22 +++++++++
+ python_skills/021_trans_encoding2.py               | 20 +++++++++
+ python_skills/022_detect_charset.py                | 29 ++++++++++++
+ python_skills/023_copy_string.py                   | 18 ++++++++
+ python_skills/024_repeat_string.py                 |  9 ++++
+ python_skills/025_get_string_length.py             | 19 ++++++++
+ python_skills/026_search_string.py                 | 52 ++++++++++++++++++++++
+ python_skills/027_beginning_patterns.py            | 24 ++++++++++
+ python_skills/028_single_match.py                  | 13 ++++++
+ python_skills/029_specific_encode_regex_match.py   | 19 ++++++++
+ python_skills/030_point_match_newline_break.py     |  8 ++++
+ python_skills/031_get_the_regex_remnant.py         |  9 ++++
+ .../032_count_single_wordString_frenquency.py      | 12 +++++
+ python_skills/033_count_frenquency.py              | 35 +++++++++++++++
+ python_skills/034_compare_string.py                | 16 +++++++
+ python_skills/035_blank_match.py                   | 11 +++++
+ python_skills/036_blank_line_match.py              | 22 +++++++++
+ python_skills/037_string_of_integer.py             | 36 +++++++++++++++
+ python_skills/038_Parse_string_float_or_int.py     | 12 +++++
+ python_skills/Python_Skills_Rescources.md          |  0
+ 22 files changed, 411 insertions(+)
+ create mode 100644 python_skills/019_literal.py
+ create mode 100644 python_skills/020_text_encoding.py
+ create mode 100644 python_skills/021_trans_encoding.py
+ create mode 100644 python_skills/021_trans_encoding2.py
+ create mode 100644 python_skills/022_detect_charset.py
+ create mode 100644 python_skills/023_copy_string.py
+ create mode 100644 python_skills/024_repeat_string.py
+ create mode 100644 python_skills/025_get_string_length.py
+ create mode 100644 python_skills/026_search_string.py
+ create mode 100644 python_skills/027_beginning_patterns.py
+ create mode 100644 python_skills/028_single_match.py
+ create mode 100644 python_skills/029_specific_encode_regex_match.py
+ create mode 100644 python_skills/030_point_match_newline_break.py
+ create mode 100644 python_skills/031_get_the_regex_remnant.py
+ create mode 100644 python_skills/032_count_single_wordString_frenquency.py
+ create mode 100644 python_skills/033_count_frenquency.py
+ create mode 100644 python_skills/034_compare_string.py
+ create mode 100644 python_skills/035_blank_match.py
+ create mode 100644 python_skills/036_blank_line_match.py
+ create mode 100644 python_skills/037_string_of_integer.py
+ create mode 100644 python_skills/038_Parse_string_float_or_int.py
+ create mode 100644 python_skills/Python_Skills_Rescources.md
+
+diff --git a/python_skills/019_literal.py b/python_skills/019_literal.py
+new file mode 100644
+index 0000000..7a6f98c
+--- /dev/null
++++ b/python_skills/019_literal.py
+@@ -0,0 +1,18 @@
++#!/usr/bin/python
++
++print 'Let\'s Say : '
++print "'Hello world'"
++print '"Hello world!!"'
++print 'String1 '"String2 ""'String3'"
++
++print u""" Multi lines
++can be written 
++using three
++"""
++print 'C:\nowhere'
++print 'C:\\nowhere'
++print r'C:\nowhere'
++
++print r'"<r>" means origin string and it\' useful for zhegnze'
++print r'let' '\'s ' r'go(Use combine)'
++
+diff --git a/python_skills/020_text_encoding.py b/python_skills/020_text_encoding.py
+new file mode 100644
+index 0000000..1d3dee2
+--- /dev/null
++++ b/python_skills/020_text_encoding.py
+@@ -0,0 +1,7 @@
++#!/usr/bin/python
++# -*- coding: utf-8 -*-
++
++print u"The default for Python 2 is ASCII(for Python 3 it's utf-8)."
++print u"This just affects how the interpreter reads the characters in the file."
++print u"When you declare a string with a u in front, like u'This is a string', it tells the Python compiler that the string is Unicode, not bytes. the most different is that youcan now embed unicode characters in the strng(that is, u'\u2665' is now legal, you can use from __futrue__ import unicode_literals to make it the default."
++print b'\u2665' u'\u2665'
+diff --git a/python_skills/021_trans_encoding.py b/python_skills/021_trans_encoding.py
+new file mode 100644
+index 0000000..8464bd8
+--- /dev/null
++++ b/python_skills/021_trans_encoding.py
+@@ -0,0 +1,22 @@
++#!/usr/bin/python
++#-*- coding: utf-8 -*-
++
++s = "Flügel"
++print s
++print "if no coding: utf-8 (use utf8 store the code)there is an error because ASCII has no ü"
++print "u'' means this is a unicode string"
++unicode_s = s.decode('utf-8')
++print u"other_encode.decode('other_type') means turn the other string which use other type into the unicode"
++print unicode_s
++
++latin_s = unicode_s.encode('latin_1')
++print u"unicode_string.encode('other') means turn unicode string into other encoding such as utf-8 or latin_1"
++print latin_s
++
++hanzi = '字瀛'
++print hanzi
++new_uni2 = u'字å­å字瀛'
++print new_uni2
++new_utf2 = new_uni2.encode('utf-8')
++print new_utf2
++
+diff --git a/python_skills/021_trans_encoding2.py b/python_skills/021_trans_encoding2.py
+new file mode 100644
+index 0000000..ccd8778
+--- /dev/null
++++ b/python_skills/021_trans_encoding2.py
+@@ -0,0 +1,20 @@
++#!/usr/bin/python
++
++new_s = '\xe5\xad\x97'
++print type(new_s)
++print new_s
++new_uni = new_s.decode('latin_1')
++print new_uni
++
++new_utf = new_uni.encode('utf-8')
++print new_utf
++new_uni2 = new_s.decode('utf-8')
++print new_uni2
++
++new_uni3 = new_s.decode('gb2312','ignore')
++print new_uni3
++
++print "decode poduce unicode"
++print "encode accept unicode"
++
++
+diff --git a/python_skills/022_detect_charset.py b/python_skills/022_detect_charset.py
+new file mode 100644
+index 0000000..664e9f3
+--- /dev/null
++++ b/python_skills/022_detect_charset.py
+@@ -0,0 +1,29 @@
++#!/usr/bin/python
++#-*- coding:utf-8 -*-
++import chardet
++
++
++def whatisthis(s):
++    if isinstance(s,str):
++        print "Ordinary string"
++    elif isinstance(s,unicode):
++        print "Unicode string"
++    else:
++        print "not a string"
++
++s = 'hello world'
++whatisthis(s)
++uni = s.decode('utf-8')
++whatisthis(uni)
++print type(uni).__name__
++lat = uni.encode('latin_1')
++whatisthis(lat)
++print type(lat).__name__
++
++print "isinstance can determin is or not unicode"
++print "also type().__name__"
++
++if type(s).__name__!='unicode':
++    print chardet.detect(s)
++else:
++    print "unicode!"
+diff --git a/python_skills/023_copy_string.py b/python_skills/023_copy_string.py
+new file mode 100644
+index 0000000..53086f0
+--- /dev/null
++++ b/python_skills/023_copy_string.py
+@@ -0,0 +1,18 @@
++#!/usr/bin/python
++#-*- coding:utf-8 -*-
++import copy
++
++print "http://stackoverflow.com/questions/24804453/how-can-i-copy-a-python-string"
++
++
++
++s = "This is a string"
++
++a = str(s)
++b = s[:]
++c = s + ''
++d = copy.copy(s)
++e = s
++f = (s + '.')[:-1]
++
++print map(id, [s, a, b, c, d, e, f])
+diff --git a/python_skills/024_repeat_string.py b/python_skills/024_repeat_string.py
+new file mode 100644
+index 0000000..dd13ade
+--- /dev/null
++++ b/python_skills/024_repeat_string.py
+@@ -0,0 +1,9 @@
++#!/usr/bin/python
++#-*- coding: utf-8 -*-
++
++s = "hello world"
++
++print s[:6]*2
++print 2*s
++print ' '.join((s[:]) * 2)
++print ' '.join([s[:]] * 2)
+diff --git a/python_skills/025_get_string_length.py b/python_skills/025_get_string_length.py
+new file mode 100644
+index 0000000..084ccf3
+--- /dev/null
++++ b/python_skills/025_get_string_length.py
+@@ -0,0 +1,19 @@
++#!/usr/bin/python
++#-*- coding: utf-8 -*-
++
++string = u'Hello world #-*- coding: utf-8 -*- '
++print "String Length : "+str(len(string))
++list_s = list(string)
++print len(list_s)
++tuple_s = tuple(string)
++tuple_l = tuple(list_s)
++print tuple_s
++print len(tuple_s)
++print tuple_l
++print len(tuple_l)
++set_s = set(string)
++set_l = set(list_s)
++set_t = set(tuple_s)
++print set_s
++print len(set_s)
++
+diff --git a/python_skills/026_search_string.py b/python_skills/026_search_string.py
+new file mode 100644
+index 0000000..e64c9ea
+--- /dev/null
++++ b/python_skills/026_search_string.py
+@@ -0,0 +1,52 @@
++#!/usr/bin/python
++#-*- coding:utf-8 -*-
++
++import re
++string_1 = "A1B2C3C3D4G5J88I9870897\n C1N200J1\n a1B2\n A10B\n"
++pattern_1 = re.compile(r'([A-Z]\d+)+')
++
++print "determine have pattern or not"
++if pattern_1.match(string_1):
++    print "matched"
++else:
++    print "not match"
++
++string_2 = u'A1B2C3C3D4G5J88I9870897'
++pattern_2 = re.compile('([A-Z]\d)+')
++
++
++print "the first location of the pattern"
++for m in re.finditer(pattern_2,string_1):
++    print m.group()
++for m in pattern_2.finditer(string_1):
++    print m.start(),m.end(), m.group()
++
++callable_iterator_object  = pattern_2.finditer(string_1)
++print callable_iterator_object
++print list(callable_iterator_object)[2].group()
++print callable_iterator_object
++#print list(callable_iterator_object)[2].group()
++# why error????
++re_matchobject = pattern_2.search(string_2)
++print "only the first span [0,14)"
++print re_matchobject
++print re_matchobject.group()
++print re_matchobject.span()
++
++
++print "the last location of the pattern"
++print "can use finditer to create a new list and use [-1]"
++print "just use the finditer"
++
++print "get more information"
++print "use m.start(),m.end(),m.group()"
++
++print "process the target lines"
++print string_1
++print pattern_1.findall(string_1)
++print re.findall(pattern_1, string_1)
++f = open('/home/wsg/Code/python_project/268_skill/020_text_encoding.py')
++for line in f:
++    print line
++    print  pattern_2.findall(string_1)
++f.close()
+diff --git a/python_skills/027_beginning_patterns.py b/python_skills/027_beginning_patterns.py
+new file mode 100644
+index 0000000..b9db012
+--- /dev/null
++++ b/python_skills/027_beginning_patterns.py
+@@ -0,0 +1,24 @@
++#!/usr/bin/python
++#-*- coding: utf-8 -*-
++
++import re
++string_1 = """helloo
++  hello    
++helloooo
++ world world worlds world"""
++pattern_1 = re.compile(r'\Ahello+')
++pattern_2 = re.compile('^hello+')
++pattern_3 = re.compile(r'hello')
++pattern_4 = re.compile(r'hello$')
++pattern_5 = re.compile(r'hello\Z')
++print pattern_1.findall(string_1)
++print pattern_2.findall(string_1)
++print pattern_3.findall(string_1)
++print pattern_4.findall(string_1)
++print pattern_5.findall(string_1)
++print "it seems \\A and ^ is the same"
++print "So as the \\Z and $"
++print pattern_3.search(string_1).group()
++print pattern_3.finditer(string_1)
++for m in pattern_3.finditer(string_1):
++    print m.group(),m.start(),m.end()
+diff --git a/python_skills/028_single_match.py b/python_skills/028_single_match.py
+new file mode 100644
+index 0000000..1246758
+--- /dev/null
++++ b/python_skills/028_single_match.py
+@@ -0,0 +1,13 @@
++#!/usr/bin/python
++#-*- coding: utf-8 -*-
++
++import re
++string_1 = "foo foo. {foo}"
++string_2 = "foo3 hfoo foobar!"
++string_3 = u'This is\ta 2pen.'
++pattern_1 = re.compile(r'\bfoo\b')
++print pattern_1.findall(string_1)
++print pattern_1.findall(string_2)
++print re.findall(r'\w+', string_2)
++print re.findall(r'\w+', string_3)
++print string_3.split()
+diff --git a/python_skills/029_specific_encode_regex_match.py b/python_skills/029_specific_encode_regex_match.py
+new file mode 100644
+index 0000000..ff6dd86
+--- /dev/null
++++ b/python_skills/029_specific_encode_regex_match.py
+@@ -0,0 +1,19 @@
++#!/usr/bin/python
++#-*- coding:utf-8 -*-
++import re
++
++print "http://stackoverflow.com/questions/10165102/how-do-i-get-a-regular-expression-to-recognize-non-ascii-characters-as-letters"
++print "Always work in unicode, and only convert to an encoded representation when necessary."
++
++string_1 = u"ö äåii差距就在这希 lllll 望您能集体 反思最后觉定 ... き ki , ひ hi , み mi, け ke, へ he, め me, こ ko, そ so, と to, の no, も mo, よ yo"
++string_2 = "ö äåii差距就在这希 lllll 望您能集体 反思最后觉定 ... き ki , ひ hi , み mi, け ke, へ he, め me, こ ko, そ so, と to, の no, も mo, よ yo"
++
++print string_1
++
++print re.findall(r'\w+', string_1)
++re_1 = re.findall(r'\w+', string_2.decode('utf-8'), flags=re.U)
++print "Use flags re.UNICODE"
++re_2 = re.sub(r'[\w]+', '', string_2.decode('utf-8'), flags=re.U)
++for m in re_1:
++    print m.encode('utf-8')
++print re_2
+diff --git a/python_skills/030_point_match_newline_break.py b/python_skills/030_point_match_newline_break.py
+new file mode 100644
+index 0000000..54d7eec
+--- /dev/null
++++ b/python_skills/030_point_match_newline_break.py
+@@ -0,0 +1,8 @@
++#!/usr/bin/python
++#-*- coding:utf-8 -*-
++
++import re
++
++print "http://stackoverflow.com/questions/8150745/regular-expression-how-to-match-a-string-containing-n-newline"
++print "USE re.DOTALL"
++print re.match(r".", "\n",re.DOTALL)
+diff --git a/python_skills/031_get_the_regex_remnant.py b/python_skills/031_get_the_regex_remnant.py
+new file mode 100644
+index 0000000..0808ee2
+--- /dev/null
++++ b/python_skills/031_get_the_regex_remnant.py
+@@ -0,0 +1,9 @@
++#!/usr/bin/python
++#-*- coding: utf-8 -*-
++
++import re
++print "get the remnant of the match use re.sub()" 
++s = "87 hel foo bar 87 foo"
++r = re.compile(r"87\s")
++print r.sub('',s)
++print r.findall(s)
+diff --git a/python_skills/032_count_single_wordString_frenquency.py b/python_skills/032_count_single_wordString_frenquency.py
+new file mode 100644
+index 0000000..00f510d
+--- /dev/null
++++ b/python_skills/032_count_single_wordString_frenquency.py
+@@ -0,0 +1,12 @@
++#!/usr/bin/python
++#-*- coding:utf-8 -*-
++
++import re
++
++        
++string_1 = "abcdsdfsdfs\ndskjghwer\basdjtwoieutuwet\s"
++pattern_1 = re.compile(r"a")
++print pattern_1.findall(string_1)
++print len(pattern_1.findall(string_1))
++
++print string_1.count('a')
+diff --git a/python_skills/033_count_frenquency.py b/python_skills/033_count_frenquency.py
+new file mode 100644
+index 0000000..0dd09d2
+--- /dev/null
++++ b/python_skills/033_count_frenquency.py
+@@ -0,0 +1,35 @@
++#!/usr/bin/python
++#-*- coding:utf-8 -*-
++
++from collections import defaultdict
++from collections import Counter
++from itertools import groupby
++import json
++
++string_1 = u"sdlkghweoivnlskdguoqeithosdkhgja;sldnasodfiuasldhg;qieuwouhydhgfjsdkljgslkdfjgslkfdjgslkfdjdgfskdfjTö äåii差距就在这希 lllll 望您能集体 反思最后觉定 ... き ki , ひ hi , み mi, け ke, へ he, め me, こ ko, そ so, と to, の no, も mo, よ yo"
++string_2 = u"ö äåii差距就在这希 lllll 望您能集体 反思最后觉定 ... き ki , ひ hi , み mi, け ke, へ he, め me, こ ko, そ so, と to, の no, も mo, よ yoy"
++
++result = defaultdict(int)
++words_1 = string_1.split()
++print words_1
++for word in words_1:
++    result[word] += 1
++    print word.encode('utf-8')
++
++print result
++
++print result.keys()
++for key in result.keys():
++    print key.encode('utf-8')
++
++result_2 = dict((key, len(list(group))) for key, group in groupby(sorted(words_1)))
++print result_2
++
++freqs_1 = Counter(words_1)
++print freqs_1
++
++
++freqs_2 = {}
++for word in words_1:
++    freqs_2[word] = freqs_2.get(word, 0) + 1
++print freqs_2
+diff --git a/python_skills/034_compare_string.py b/python_skills/034_compare_string.py
+new file mode 100644
+index 0000000..361ad26
+--- /dev/null
++++ b/python_skills/034_compare_string.py
+@@ -0,0 +1,16 @@
++#!/usr/bin/python
++#-*- coding:utf-8 -*-
++from collections import Counter
++
++string_1 = u'abc def ghi'
++string_2 = u'abc def ghi'
++string_3 = u'ghi def abc'
++
++print string_1 == string_2
++print string_2 == string_3
++print Counter(string_1) == Counter(string_2)
++
++set_2 = set(string_1.split(' '))
++set_3 = set(string_3.split(' ')) 
++
++print set_2 == set_3
+diff --git a/python_skills/035_blank_match.py b/python_skills/035_blank_match.py
+new file mode 100644
+index 0000000..c37548a
+--- /dev/null
++++ b/python_skills/035_blank_match.py
+@@ -0,0 +1,11 @@
++#!/usr/bin/python
++#-*- coding:utf-8 -*-
++
++import re
++
++pattern_1 = re.compile(r' ')
++string_1 = u"   \t\n\r\f"
++print string_1
++print string_1.count(r"\s")
++print len(pattern_1.findall(string_1))
++
+diff --git a/python_skills/036_blank_line_match.py b/python_skills/036_blank_line_match.py
+new file mode 100644
+index 0000000..dd2f62a
+--- /dev/null
++++ b/python_skills/036_blank_line_match.py
+@@ -0,0 +1,22 @@
++#!/usr/bin/python
++#-*- coding:utf-8 -*-
++
++string_1 = """ 
++a\n
++
++b
++  \n      
++bbb\n
++"""
++
++file_1 = open('/home/wsg/Code/python_project/268_skill/032_count_single_wordString_frenquency.py')
++
++for line in file_1:
++    if not line.strip():
++        print "a blank line"
++    else:
++        print line
++
++print "---------------"
++for line in string_1:
++    print line
+diff --git a/python_skills/037_string_of_integer.py b/python_skills/037_string_of_integer.py
+new file mode 100644
+index 0000000..35aff6e
+--- /dev/null
++++ b/python_skills/037_string_of_integer.py
+@@ -0,0 +1,36 @@
++#!/usr/bin/python
++#-*- coding:utf-8 -*-
++
++#**********************************************************
++#Filename: 037_string_of_integer.py
++#Author: Andrew Wang - shuguang.wang1990@gmail.com
++#Description: ---
++#Create: 2016-08-25 22:38:55
++#Last Modifieda: 2016-08-25 22:38:55
++#*********************************************************
++
++def RepresentsInt(s):
++    try:
++        int(s)
++        return True
++    except ValueError:
++        return False
++
++def RepresentsFloat(s):
++    try:
++        float(s)
++        return True
++    except ValueError:
++        return False
++
++print RepresentsInt("11234")
++print RepresentsInt("11.234")
++print RepresentsInt("11l234")
++print RepresentsFloat("11234")
++print RepresentsFloat("0.11234")
++
++
++print "isdigit"
++print "hello".isdigit()
++print "1.2".isdigit()
++print "12".isdigit()
+diff --git a/python_skills/038_Parse_string_float_or_int.py b/python_skills/038_Parse_string_float_or_int.py
+new file mode 100644
+index 0000000..a1b5a95
+--- /dev/null
++++ b/python_skills/038_Parse_string_float_or_int.py
+@@ -0,0 +1,12 @@
++#!/usr/bin/python
++#-*- coding:utf-8 -*-
++
++#**********************************************************
++#Filename: 038_Parse_string_float_or_int.py
++#Author: Andrew Wang - shuguang.wang1990@gmail.com
++#Description: ---
++#Create: 2016-08-25 23:00:58
++#Last Modifieda: 2016-08-25 23:00:58
++#*********************************************************
++
++
+diff --git a/python_skills/Python_Skills_Rescources.md b/python_skills/Python_Skills_Rescources.md
+new file mode 100644
+index 0000000..e69de29
+-- 
+2.5.5
+

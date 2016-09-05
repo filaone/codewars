@@ -1,0 +1,23 @@
+From f8f8e904dd0ef0ab40cae6b6140e3f6dd23b10d9 Mon Sep 17 00:00:00 2001
+From: cnetwork <shuguang.wang1990@gmail.com>
+Date: Sat, 3 May 2014 23:43:35 +0800
+Subject: [PATCH 13/25] correct the wrong link
+
+---
+ Resource_WebSite.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Resource_WebSite.md b/Resource_WebSite.md
+index 6f0c1b3..c1c021e 100644
+--- a/Resource_WebSite.md
++++ b/Resource_WebSite.md
+@@ -77,5 +77,5 @@
+ ##SantaClausable Interface
+ ###014_si_7k.rb
+ 
+-* Check If A Ruby Method Exists    [link](http://http://www.dzone.com/snippets/check-if-ruby-method-exists)
++* Check If A Ruby Method Exists    [link](http://www.dzone.com/snippets/check-if-ruby-method-exists)
+ 
+-- 
+2.5.5
+

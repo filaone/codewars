@@ -1,0 +1,475 @@
+From 7418f377216e6274b8e9bcfd8ba447cd7925c2a1 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=E7=8E=8B=E6=9B=99=E5=85=89?=
+ <Alex@oushokous-MacBook-Pro.local>
+Date: Tue, 29 Apr 2014 21:59:38 +0800
+Subject: [PATCH 06/25] add 007 ipv4 to int
+
+---
+ .DS_Store        | Bin 0 -> 6148 bytes
+ 001_wttc_8.rb    |   7 -------
+ 001_wttc_8k.rb   |   7 +++++++
+ 002_sfl_7.rb     |  33 ---------------------------------
+ 002_sfl_7k.rb    |  33 +++++++++++++++++++++++++++++++++
+ 003_stgc_7.rb    |  15 ---------------
+ 003_stgc_7k.rb   |  15 +++++++++++++++
+ 004_pd_7.rb      |   7 -------
+ 004_pd_7k.rb     |   7 +++++++
+ 005_roh_7.rb     |  39 ---------------------------------------
+ 005_roh_7k.rb    |  39 +++++++++++++++++++++++++++++++++++++++
+ 006_waps_7.rb    |  27 ---------------------------
+ 006_waps_7k.rb   |  27 +++++++++++++++++++++++++++
+ 007_iti_6k.md    |  29 +++++++++++++++++++++++++++++
+ 007_iti_6k.rb    |  33 +++++++++++++++++++++++++++++++++
+ 008_notzon_5k.rb |   0
+ 16 files changed, 190 insertions(+), 128 deletions(-)
+ create mode 100644 .DS_Store
+ delete mode 100644 001_wttc_8.rb
+ create mode 100644 001_wttc_8k.rb
+ delete mode 100644 002_sfl_7.rb
+ create mode 100644 002_sfl_7k.rb
+ delete mode 100644 003_stgc_7.rb
+ create mode 100644 003_stgc_7k.rb
+ delete mode 100644 004_pd_7.rb
+ create mode 100644 004_pd_7k.rb
+ delete mode 100644 005_roh_7.rb
+ create mode 100644 005_roh_7k.rb
+ delete mode 100644 006_waps_7.rb
+ create mode 100644 006_waps_7k.rb
+ create mode 100644 007_iti_6k.md
+ create mode 100644 007_iti_6k.rb
+ create mode 100644 008_notzon_5k.rb
+
+diff --git a/.DS_Store b/.DS_Store
+new file mode 100644
+index 0000000000000000000000000000000000000000..2744e645fa1205914fa9942ef748e7fbbe15fbb2
+GIT binary patch
+literal 6148
+zcmeHK%Sr=55UkN4ktpQoagI5OQ9+MOh=ON7z_1B=S%_%F>wZQ)$`9~w*6N3n;CL00
+z?q#}WXS$|m3w9m=(&S|^28ICoEP_cY1(W7t*NzAGh)KtI#fr}ycepGJ^cS0C?uR(x
+zGv=%}=YNbR)Hls?UN_5{Q6kYB%ZO#a>*#?4WuB7xjC(Z13lw<iow1`%O?j5_OnECj
+zsA5GXt{K1HU=B3nIhl`G{FG1Uxh8YZ=c!4<g#w{KC=d#S0;&M_Y_a~pFnlNw3WNe*
+z3ds79Sp+M`)=-xYI=uoA<ruBTx*U{+lN~F^){s54WK^P2lV35C(b=9ou5xS*jgI7(
+zkK~y@FE2^6bNsB~NR?suP#_f8R$$j&hqC`)@s}xH^0z7R77By{|4f0@o8C?*{3zdB
+zzkQzUwV7qcA|`RIRA{Vk9Rm0w>&TIIT7Q;0<0{A2P)3n<r4!>Ipn`-81%5$+4+uRy
+AqW}N^
+
+literal 0
+HcmV?d00001
+
+diff --git a/001_wttc_8.rb b/001_wttc_8.rb
+deleted file mode 100644
+index 0643dbc..0000000
+--- a/001_wttc_8.rb
++++ /dev/null
+@@ -1,7 +0,0 @@
+-#welcome to the city
+-=begin
+-1. The "name" must be connect with " "
+-=end
+-
+-def say_hello
+-  
+\ No newline at end of file
+diff --git a/001_wttc_8k.rb b/001_wttc_8k.rb
+new file mode 100644
+index 0000000..0643dbc
+--- /dev/null
++++ b/001_wttc_8k.rb
+@@ -0,0 +1,7 @@
++#welcome to the city
++=begin
++1. The "name" must be connect with " "
++=end
++
++def say_hello
++  
+\ No newline at end of file
+diff --git a/002_sfl_7.rb b/002_sfl_7.rb
+deleted file mode 100644
+index 0a4d2e2..0000000
+--- a/002_sfl_7.rb
++++ /dev/null
+@@ -1,33 +0,0 @@
+-#search for letters
+-def change(word)
+-  # put your code here!
+-  arr = Array.new(26, '0')
+-  #arr = [0] * 26
+-  str = word.downcase
+-  str.each_byte{|byte|   #this byte can be replace by |c| or other variable
+-    if ((byte<=122)&&(byte>=97))
+-      arr[byte-97] = 1
+-    end
+-    #if can not have {} here!!
+-   }
+-  return arr.join
+-  #doesn't need to use return it can be automatically
+-  # it is shortcut of  arr.join("") because there is no separte code in "" 
+-end
+-
+-
+-def change_2(word)
+-  (”a”..“z“).map {|v| word.downcase.include?(v) ? '1' : '0'}.join
+-end
+-
+-
+-def change_3(word)
+-  0.upto(25).map { |v| word.index(('a'.ord + i).chr).nil? ? 0 : 1}.join
+-  #'a'.ord can get its ascii value
+-end
+-
+-def change_4(word)
+-  '%026b' % (a.each_byte.reduce(0)) { |m, c| m | (1 << 122 - (c | 32))} & ~(-1 << 26)
+-end
+-#这种印出方式参见
+-#puts "He's %d inches tall." % my_height    has 'sapce' between '%' and my_height
+\ No newline at end of file
+diff --git a/002_sfl_7k.rb b/002_sfl_7k.rb
+new file mode 100644
+index 0000000..0a4d2e2
+--- /dev/null
++++ b/002_sfl_7k.rb
+@@ -0,0 +1,33 @@
++#search for letters
++def change(word)
++  # put your code here!
++  arr = Array.new(26, '0')
++  #arr = [0] * 26
++  str = word.downcase
++  str.each_byte{|byte|   #this byte can be replace by |c| or other variable
++    if ((byte<=122)&&(byte>=97))
++      arr[byte-97] = 1
++    end
++    #if can not have {} here!!
++   }
++  return arr.join
++  #doesn't need to use return it can be automatically
++  # it is shortcut of  arr.join("") because there is no separte code in "" 
++end
++
++
++def change_2(word)
++  (”a”..“z“).map {|v| word.downcase.include?(v) ? '1' : '0'}.join
++end
++
++
++def change_3(word)
++  0.upto(25).map { |v| word.index(('a'.ord + i).chr).nil? ? 0 : 1}.join
++  #'a'.ord can get its ascii value
++end
++
++def change_4(word)
++  '%026b' % (a.each_byte.reduce(0)) { |m, c| m | (1 << 122 - (c | 32))} & ~(-1 << 26)
++end
++#这种印出方式参见
++#puts "He's %d inches tall." % my_height    has 'sapce' between '%' and my_height
+\ No newline at end of file
+diff --git a/003_stgc_7.rb b/003_stgc_7.rb
+deleted file mode 100644
+index 5e3498f..0000000
+--- a/003_stgc_7.rb
++++ /dev/null
+@@ -1,15 +0,0 @@
+-#sort for gift code
+-def sort_gift_code code
+-  #TODO
+-  ('a'..'z').map {|letter| code.include?(letter) ? letter : ''}.join
+-end
+-
+-
+-def sort_gift_code code
+-  code.chars.sort.join
+-  #code.split('').sort.join
+-end
+-# string#chars return an array of characters in str
+-# Array#sort can sort it then use the join to connect them
+-#you can use split('') to separte them
+-
+diff --git a/003_stgc_7k.rb b/003_stgc_7k.rb
+new file mode 100644
+index 0000000..5e3498f
+--- /dev/null
++++ b/003_stgc_7k.rb
+@@ -0,0 +1,15 @@
++#sort for gift code
++def sort_gift_code code
++  #TODO
++  ('a'..'z').map {|letter| code.include?(letter) ? letter : ''}.join
++end
++
++
++def sort_gift_code code
++  code.chars.sort.join
++  #code.split('').sort.join
++end
++# string#chars return an array of characters in str
++# Array#sort can sort it then use the join to connect them
++#you can use split('') to separte them
++
+diff --git a/004_pd_7.rb b/004_pd_7.rb
+deleted file mode 100644
+index 1a75e00..0000000
+--- a/004_pd_7.rb
++++ /dev/null
+@@ -1,7 +0,0 @@
+-#padded numbers
+-def solution(value)
+-  "Value is %.5d" % value
+-  # "Value is %05d" % [value]
+-  sprintf "Value is %05d", value
+-  # we should use sprintf to get the 00005
+-end
+\ No newline at end of file
+diff --git a/004_pd_7k.rb b/004_pd_7k.rb
+new file mode 100644
+index 0000000..1a75e00
+--- /dev/null
++++ b/004_pd_7k.rb
+@@ -0,0 +1,7 @@
++#padded numbers
++def solution(value)
++  "Value is %.5d" % value
++  # "Value is %05d" % [value]
++  sprintf "Value is %05d", value
++  # we should use sprintf to get the 00005
++end
+\ No newline at end of file
+diff --git a/005_roh_7.rb b/005_roh_7.rb
+deleted file mode 100644
+index 3f1aa70..0000000
+--- a/005_roh_7.rb
++++ /dev/null
+@@ -1,39 +0,0 @@
+-#remove odd hashes
+-def remove_odd_hashes(array, key_1, key_2)
+-  array.delete_if{|x| (x[key_1] + x[key_2]).odd? }
+-end
+-#there is an interator delete_if!
+-
+-def remove_odd_hashes(array, key_1, key_2)
+-  array.delete_if{|x| x.values.inject(:+).odd?}
+-end
+-
+-def remove_odd_hashes(array, key_1, key_2)
+-  array.reject {|h| (h[key_1] + h[key_2]).odd? }
+-end
+-
+-def remove_odd_hashes(array, key_1, key_2)
+-  array.select do |x|
+-    (x[key_1] + x[key_2]).even?
+-  end
+-end
+-
+-# may be error
+-def remove_odd_hashes(array, key_1, key_2)
+-  #you can check for "%" operator
+-  array.map{ |hashes| ((hashes[key_1] + hashes[key_2])%2 != 0) ? array.delete(hashes) : {} }
+-  return array
+-end
+-#pay attention 1.9.2 cannot do an array with only one variable
+-#!!!!!expect [] but it return [ {a: 3, b: 4} ]!!!
+-
+-
+-def remove_odd_hashes_2(array, key_1, key_2)
+-  array2 = []
+-  array.map{ |hashes| ((hashes[key_1] + hashes[key_2]) % 2 != 0) ? array2.push(hashes) : {}}
+-  array2
+-end
+-
+-
+-p remove_odd_hashes( 
+-  [ {a: 3, b: 4} ],  :a, :b)
+\ No newline at end of file
+diff --git a/005_roh_7k.rb b/005_roh_7k.rb
+new file mode 100644
+index 0000000..3f1aa70
+--- /dev/null
++++ b/005_roh_7k.rb
+@@ -0,0 +1,39 @@
++#remove odd hashes
++def remove_odd_hashes(array, key_1, key_2)
++  array.delete_if{|x| (x[key_1] + x[key_2]).odd? }
++end
++#there is an interator delete_if!
++
++def remove_odd_hashes(array, key_1, key_2)
++  array.delete_if{|x| x.values.inject(:+).odd?}
++end
++
++def remove_odd_hashes(array, key_1, key_2)
++  array.reject {|h| (h[key_1] + h[key_2]).odd? }
++end
++
++def remove_odd_hashes(array, key_1, key_2)
++  array.select do |x|
++    (x[key_1] + x[key_2]).even?
++  end
++end
++
++# may be error
++def remove_odd_hashes(array, key_1, key_2)
++  #you can check for "%" operator
++  array.map{ |hashes| ((hashes[key_1] + hashes[key_2])%2 != 0) ? array.delete(hashes) : {} }
++  return array
++end
++#pay attention 1.9.2 cannot do an array with only one variable
++#!!!!!expect [] but it return [ {a: 3, b: 4} ]!!!
++
++
++def remove_odd_hashes_2(array, key_1, key_2)
++  array2 = []
++  array.map{ |hashes| ((hashes[key_1] + hashes[key_2]) % 2 != 0) ? array2.push(hashes) : {}}
++  array2
++end
++
++
++p remove_odd_hashes( 
++  [ {a: 3, b: 4} ],  :a, :b)
+\ No newline at end of file
+diff --git a/006_waps_7.rb b/006_waps_7.rb
+deleted file mode 100644
+index 4f10caa..0000000
+--- a/006_waps_7.rb
++++ /dev/null
+@@ -1,27 +0,0 @@
+-#Given an array of number, which are perfect squares?
+-#this means you choose square numbers from the array
+-
+-=begin
+-pay attention the range is not array! so the array = 1..16 cannot use array[1]
+-the array can do map select dircetirly and it can do some other things just like array can
+-=end
+-
+-def gets_squares(array)
+-  array.select{ |i| Math.sqrt(i) % 1 == 0}.uniq.sort
+-end
+-# Math.sqrt() = i**0.5
+-
+-#my solution :the answer is right but it is totally mass
+-#understand wrong not one by one but select
+-def get_squares(array)
+-  #Enter code here!
+-  arr = array.to_a.sort
+-  p array
+-  number = arr[-1]
+-  str = Array.new
+-  (1..number).map {|n| (arr.include?(n*n))&&(n*n <= number) ? str<<n*n :{}}
+-  str
+-end
+-
+-
+-p get_squares(1..2)
+diff --git a/006_waps_7k.rb b/006_waps_7k.rb
+new file mode 100644
+index 0000000..4f10caa
+--- /dev/null
++++ b/006_waps_7k.rb
+@@ -0,0 +1,27 @@
++#Given an array of number, which are perfect squares?
++#this means you choose square numbers from the array
++
++=begin
++pay attention the range is not array! so the array = 1..16 cannot use array[1]
++the array can do map select dircetirly and it can do some other things just like array can
++=end
++
++def gets_squares(array)
++  array.select{ |i| Math.sqrt(i) % 1 == 0}.uniq.sort
++end
++# Math.sqrt() = i**0.5
++
++#my solution :the answer is right but it is totally mass
++#understand wrong not one by one but select
++def get_squares(array)
++  #Enter code here!
++  arr = array.to_a.sort
++  p array
++  number = arr[-1]
++  str = Array.new
++  (1..number).map {|n| (arr.include?(n*n))&&(n*n <= number) ? str<<n*n :{}}
++  str
++end
++
++
++p get_squares(1..2)
+diff --git a/007_iti_6k.md b/007_iti_6k.md
+new file mode 100644
+index 0000000..bbfee94
+--- /dev/null
++++ b/007_iti_6k.md
+@@ -0,0 +1,29 @@
++#Ipv4 to int32
++
++###Ruby N进制到10进制的转化
++
++| expression  |    result|
++|-------------|----------|
++|"1234".to_i| 12345|
++|"99 red ballon".to_i|99|
++|"0a".to_i(16)|10|
++|"hello".to_i|0|
++|"1100101".to_i(2)|101|
++|"1100101".to_i(8)|294977|
++|"1100101".to_i(10)|1100101|
++|"1100101".to_i(16)|17826049|
++
++    number.to_i(N) 
++    
++
++
++###Ruby 字符串格式化
++|expression  |    result|
++|-|-|
++|"%05d" % 123 |00123|
++|"%02X" % 10 | 0A|
++|"%03x" % 10 | 00a|
++|"%.10x" % 10| 000000000a|
++|"10x" % 10| "(9个空格)a"|
++
++[链接](http://blog.csdn.net/garn_hsia/article/details/7869895)
+\ No newline at end of file
+diff --git a/007_iti_6k.rb b/007_iti_6k.rb
+new file mode 100644
+index 0000000..4cdab3d
+--- /dev/null
++++ b/007_iti_6k.rb
+@@ -0,0 +1,33 @@
++# ipv4 to int32
++# it has some massive information,it is unnecessary to calculate 128.32.10.1 == 10000000.00100000.00001010.00000001
++
++def ip_to_int32(ip)
++  ("%02x%02x%02x%02x" % ip.split('.')).to_i(16)
++# ("%08b%08b%08b%08b" % ip.split('.')).to_i(2)
++end
++# N进制转化为10进制的方法为：to_i(N)
++# 2X进制可以很方便的转化，但是2X转化为其他进制比较难
++# also can use map + join
++
++
++def ip_to_int32(ip)
++  ip.split('.').inject(0){|total, val|
++    (total << 8) + val.to_i
++  }
++end
++#<<移位
++
++def ip_to_int32(ip)
++  ip.split(".").map{ |octet| ("%08b" % octet.to_i) }.join.to_i(2)
++end
++ 
++
++def convert(ipv4)
++  string = ipv4.split(/\./)
++  sum = 0
++  (0..3).map{|nu|
++    sum = (string[nu].to_i * (2 ** (8*(3 - nu)))) + sum 
++    
++  }
++ sum
++end
+diff --git a/008_notzon_5k.rb b/008_notzon_5k.rb
+new file mode 100644
+index 0000000..e69de29
+-- 
+2.5.5
+
