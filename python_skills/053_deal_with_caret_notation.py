@@ -13,7 +13,7 @@ string_1 = "take I'm a \ new \" man \" "
 pattern_1 = re.compile(r'(["\'\\])')
 string_2 = pattern_1.sub(r'\\\\\1',string_1)
 print string_2
-print "use sub and () and \\1"
+print "use sub and () and \\1 remember use r""!!! with \\1"
 
 pattern_2 = re.compile(r'\\\\([\\\'"])')
 string_3 = pattern_2.sub(r'\1',string_2)
