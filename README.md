@@ -5,9 +5,9 @@
 **You Are a Warrior Now**
 
 	do { |you|
-	Solve_probem_Yourself(codewars)
-	Get_the_code_from(000_abc_0k.rb)
-	Learn_what_behind(resources_website.md)
+	Solve_probem_Yourself(http://www.codewars.com/kata/welcome-to-the-city)
+	Get_the_code_from(001_wttc_8k.rb)
+	Learn_what_behind(ruby_wars/README.md)
 	Improve(yourself)
 	}
 	
