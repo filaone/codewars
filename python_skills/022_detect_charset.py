@@ -15,10 +15,10 @@ s = 'hello world'
 whatisthis(s)
 uni = s.decode('utf-8')
 whatisthis(uni)
-print type(uni).__name__
+print "type uni name : ",type(uni).__name__
 lat = uni.encode('latin_1')
 whatisthis(lat)
-print type(lat).__name__
+print "type lat name",type(lat).__name__
 
 print "isinstance can determin is or not unicode"
 print "also type().__name__"

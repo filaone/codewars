@@ -10,10 +10,10 @@ string_2 = "ö äåii差距就在这希 lllll 望您能集体 反思最后觉定
 
 print string_1
 
-print re.findall(r'\w+', string_1)
+print re.findall(r'\w+', string_1,flags=re.U)
 re_1 = re.findall(r'\w+', string_2.decode('utf-8'), flags=re.U)
 print "Use flags re.UNICODE"
 re_2 = re.sub(r'[\w]+', '', string_2.decode('utf-8'), flags=re.U)
 for m in re_1:
     print m.encode('utf-8')
-print re_2
+print "re_2 : ",re_2

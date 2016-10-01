@@ -7,20 +7,20 @@ def f_lower(s):
     pattern_lower = re.compile(r"[a-z]")
     if pattern_lower.match(s):
         return True
-    return False    
+    return False
 
 def f_upper(s):
     pattern_upper = re.compile(r"[A-Z]")
     if pattern_upper.match(s):
         return True
-    return False    
+    return False
 
 def f_string_lower(s):
     pattern_lower = re.compile(r"\A[a-z]*\z")
     if re.match(pattern_lower,s):
         return True
     return False
-    
+
 print f_lower("s")
 print f_lower("S")
 print f_upper("s")
@@ -30,7 +30,7 @@ print f_upper("S")
 pattern_lower = re.compile(r"[a-z]")
 print re.findall(pattern_lower, "eeeeee")
 
-print "s".isupper()
+print "ssssss : ","sssssss".isupper()
 print "e".islower()
 print "E".islower()
 
