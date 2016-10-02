@@ -91,6 +91,102 @@ print pattern.search(str).group()/span()
 * 每个单词首字母大写使用string.title(), 段落首字母大写使用string.capitalize()
 
 
+###041_partition_of_string.py
+* 使用string[i:j]来进行取得字符串片段，如果是其他字符编码，最好字符串采用u''进行初始化，才可以不出现打断情况
+
+
+###042_partition_of_matched_regex.py
+* re.match 从字符串开头进行匹配并只匹配一次
+* re.search 对所有匹配项进行匹配
+* re.findall 也是对所有匹配项进行匹配
+* 这里需要再次进行确认，每一个函数的具体返回值以及匹配内容（？）
+
+###043_per_post_string_with_regex.py
+* 取出正则表达式之前或者之后的内容
+*  re.compile(ur"(.\*)PATTERN(.\*)") 然后通过groups() 以及group(n)来查看相应内容
+
+
+###044_regex_match_length.py
+* 使用re.finditer可以返回一个iterator的集合，每一个iterator都包含着一个匹配项的 start(), end(), span()
+
+
+###045_split_line_to_section.py
+* split("\n")
+
+###046_split_string_into_line.py
+* 使用 string.splitlines()
+* 还可以通过readline 并进行行处理存储到列表
+
+###047_split_string_into_word.y
+* 使用split(r"xxx")进行分割
+* 使用re.split(pattern_1, string_1)
+
+
+###048_regex_split_string.py
+* 使用 re.compile(r"pattern").split(string) 同047
+
+###049_each_elem_of_string.py
+* 将string 转化为List,再一一进行处理
+
+
+###050_each_elem_as_number.py
+* 将char 转化为 number使用ord(char)
+* 将number转为 char 使用chr(number)
+* 将number转化为unicode的char 使用unichr(number)
+
+
+###051_combine_stirngs.py
+* 使用str1+str2 str1,str2两种方法
+
+###052_replace_part_of_string.py
+* 使用re.sub进行字符串内容替换
+
+
+###053_deal_with_caret_notation.py
+* re中使用r"" +（） + \\1可以进行匹配内容抽取
+
+
+###054_delete_part_of_string
+* 使用\1 替换\1+来达到删除重复的目的
+* 使用lstrip(‘xxx’)删除左侧内容 rstrip 删除右侧内容, strip删除双端内容
+
+
+###055_chomp_the_string_end.py
+
+
+###056_delete_bank_around_the_string.py
+* 使用strip(" ")
+
+
+###057_space_tab_translate.py
+* 使用re.sub去替换 tab 和space 
+* 如: re.compile(ur" "*tabstop_num) 替换为\t
+
+###058_change_indent_wtc.py
+* 使用re.sub变更缩进
+
+
+###059_NULL
+
+###060_add_string_in_the_end.py
+* 使用str1 += str2即可
+
+###061_delete_part_of_the_string.py
+* use a[4:] 与 re.sub 进行删除
+
+###062_
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

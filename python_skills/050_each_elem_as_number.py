@@ -12,6 +12,6 @@ string_1 = "Hello world"
 x = lambda y:unichr(y)
 m = lambda n:ord(n) # accept char
 f = lambda x:chr(x) # accept number
-print x(97)
+print x(997)
 print m("a")
 
