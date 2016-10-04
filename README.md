@@ -1,8 +1,6 @@
 #Code For the Codewars
 ====
-
-
-
+![octodex](https://github.com/Cnetwork/codewars/python_skills/addon/octocat.jpg)
 	
 ##Section 1 : Ruby Codewars
 ---
