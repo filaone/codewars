@@ -1,6 +1,8 @@
 #Code For the Codewars
 ====
-![octodex](https://github.com/Cnetwork/codewars/blob/master/python_skills/addon/octocat.jpg)
+<div align="center">
+<img src="https://github.com/Cnetwork/codewars/blob/master/python_skills/addon/octocat.jpg" width="50%" hight="50%">
+</div>
 ##Section 1 : Ruby Codewars
 ---
 **You Are a Warrior Now**
