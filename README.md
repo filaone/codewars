@@ -1,7 +1,7 @@
 #Code For the Codewars
 ====
 <div align="center">
-<img src="https://github.com/Cnetwork/codewars/blob/master/python_skills/addon/octocat.jpg" width="50%" hight="50%">
+<img src="https://github.com/Cnetwork/codewars/blob/master/python_skills/addon/octocat.jpg" width="50%" height="50%">
 </div>
 ##Section 1 : Ruby Codewars
 ---
