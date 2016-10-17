@@ -1,0 +1,13 @@
+import os
+
+filename = "./addon/153_create"
+
+if os.path.exists(filename):
+    print "Files exists Create Error"
+else:
+    with open(filename,"w") as file:
+        file.write((open(__file__,'r')).read())
+
+
+
+
