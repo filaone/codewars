@@ -15,3 +15,4 @@ print 3.14/2
 print math.fmod(2.11, 2)
 print math.fmod(10, -3.5)
 print 10%-3.5
+print type(divmod(0,-3.5))
