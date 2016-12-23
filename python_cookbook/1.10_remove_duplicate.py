@@ -35,6 +35,7 @@ def dedup_2(items, key = None):
 
 
 a = [1,5,1,2,6,8,4,6,2,9,0,1]
+print(list(set(a)))
 template = dedup(a)
 a = list(template)
 print(a)
